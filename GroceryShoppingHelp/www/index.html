@@ -1,29 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>GroceryShoppingHelp</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Grocery Shopping Helper</h1>
-            <h2>by Randal Johnson</h2>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>GroceryShoppingHelper</title>
+
+    <script src="scripts/jquery-1.8.0.min.js"></script>
+    <script src="scripts/jquery-1.8.0.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+
+    <link href="css/GroceryShopperTheme.min.css" rel="stylesheet" />
+     <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+</head>
+
+<body>
+    <div data-role="page" id="pageone" style="height: 100%;">
+
+        <div>
+            <div>
+                <h1>
+                    Grocery Shopping Helper
+                </h1>
+            </div><br clear:all>
+        </div>
+        <br>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="css/images/MelonHead30.png">
             </div>
         </div>
+        <br clear="all">
+        
+        <div class="flex-item">
+            <a href="#pagetwo" class="ui-btn">START!</a>
+        </div>
+        <br clear="all">
+        <div class="flex-item">
+            For helping calculate the cost per ounce of foods, so you can easily choose the best value!
+        </div>
+
+
+
+
+    </div>
+
+    <div data-role="page" id="pagetwo">
+        <div class="flex-container">
+            <div class="flex-item">
+                <h1>
+                    Grocery Shopping Helper
+                    </h1>
+            </div>
+        </div>
+
+        <div class="flex-container2">
+            <div class="flex-item">
+
+            </div>
+            <br clear="all">
+
+            <div class="flex-item">
+                Enter the price then number of pounds:
+            </div>
+
+            <br clear="all">
+
+            <div class="flex-item2">
+                <span class="lblInput">Price:</span><input id="price" type="number">
+            </div>
+
+            <br clear="all">
+
+            <div class="flex-item2">
+                <span class="lblInput">Pounds:</span><input id="pounds" type="number">
+            </div>
+            <br clear="all">
+            <div class="flex-item">
+                <a href="#" class="ui-btn" id="calc">Calculate</a>
+            </div>
+            <br clear="all">
+            <div class="flex-item2">
+                <span class="lblInput">Cost per oz:</span><input id="cost" readonly="readonly">
+
+            </div>
+        </div>
+    </div>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+</body>
 </html>

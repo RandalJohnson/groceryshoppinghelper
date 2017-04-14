@@ -1,30 +1,21 @@
-﻿// For an introduction to the Blank template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkID=397704
-// To debug code on page load in Ripple or on Android devices/emulators: launch your app, set breakpoints, 
-// and then run "window.location.reload()" in the JavaScript Console.
-(function () {
-    "use strict";
+﻿
+$(document).ready(function () {
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+        $('form').on('focus', 'input[type=number]', function(e) {
+            $(this).on('wheel', function(e) {
+                e.preventDefault();
+            });
+        });
+        $("#calc").click(function () {
+            var price = $("#price").val();
+            var pounds = $("#pounds").val();
+            var ounces = pounds * 16;
+            var cost = price / ounces;
 
-    function onDeviceReady() {
-        // Handle the Cordova pause and resume events
-        document.addEventListener( 'pause', onPause.bind( this ), false );
-        document.addEventListener( 'resume', onResume.bind( this ), false );
-        
-        // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
-        var parentElement = document.getElementById('deviceready');
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-    };
+            $("#cost").val(cost.toFixed(2));
 
-    function onPause() {
-        // TODO: This application has been suspended. Save application state here.
-    };
 
-    function onResume() {
-        // TODO: This application has been reactivated. Restore application state here.
-    };
-} )();
+        });
+
+
+});
