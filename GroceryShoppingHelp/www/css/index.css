@@ -3,6 +3,7 @@ body {
     background-color: black;
     margin-left: 1%;
     margin-right: 1%;
+    overflow:hidden;
 }
 
 .flex-container {
@@ -23,7 +24,7 @@ body {
     background-color: black;
     color: lightgreen;
     flex-flow: column nowrap;
-    align-content: space-between;
+    align-content: space-around;
     justify-content: space-around;
 
     overflow:hidden;
@@ -63,6 +64,7 @@ body {
     overflow:hidden;
 
 }
+
 .lblInput  {
     color:white;
     background-color:black;
@@ -98,22 +100,23 @@ input {
 }
 
 h1 {
+    font-size: 24px;
     border: solid;
     border-color: #fff53d;
     color: #fff53d;
     border-radius: 30px;
     text-align: center;
     background-color: #3d61ff;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
     padding: 3px;
 }
 
 h2 {
     font-size: 20px;
     border: solid;
-    border-color: gold;
-    color: gold;
+    border-color: #fff53d;
+    color: #fff53d;
     border-radius: 20px;
     text-align: center;
     background-color: dodgerblue;

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
+    <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <meta name="format-detection" content="telephone=no">
@@ -12,7 +14,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
     <title>GroceryShoppingHelper</title>
-
+    <icon src="images/MelonHead.png" />
     <script src="scripts/jquery-1.8.0.min.js"></script>
     <script src="scripts/jquery-1.8.0.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
@@ -28,35 +30,30 @@
     <div data-role="page" id="pageone" style="height: 100%;">
         <div class="flex-container">
             <div>
-                <div>
-                    <h1>
-                        Grocery Shopping Helper
-                    </h1>
-                </div>
+                <h1>
+                    Grocery Shopping Helper
+                </h1>
             </div>
-            
-
 
             <div class="flex-item2">
                 <a href="#about" class="authorship" data-transition="flip">by Randal Johnson</a>
             </div>
-            <br clear:all>
-
-
 
 
             <div class="flex-item">
                 <img src="css/images/MelonHead30.png">
             </div>
         </div>
-        <br clear="all">
         <div class="flex-item3">
-            <p class="p1words">Convert pound to ounce price:</p>
+            <p class="p1words">Convert to ounce price:</p>
         </div>
-        <div class="flex-item">
+        <div class="flex-item3">
             <a href="#pagetwo" class="ui-btn" data-transition="flip">Pounds</a>
         </div>
-        <br clear="all">
+        <div class="flex-item3">
+            <a href="#pagefour" class="ui-btn" data-transition="flip">Ounces</a>
+        </div>
+
         <div class="flex-item3">
             <p class="p1words">Convert bottle packs to ounce price:</p>
         </div>
@@ -72,24 +69,17 @@
     </div>
 
     <div data-role="page" id="pagetwo">
-        <div class="flex-container">
+        <div class="flex-container2">
             <div class="flex-item">
                 <h2>
                     Grocery Shopping Helper
                 </h2>
             </div>
-        </div>
 
-        <div class="flex-container2">
-            <div class="flex-item">
-
-            </div>
-            <br clear="all">
 
             <div class="flex-item">
                 Enter the price then number of pounds:
             </div>
-
             <br clear="all">
 
             <div class="flex-item2">
@@ -110,7 +100,11 @@
                 <span class="lblInput">Cost per oz:</span><input id="cost" readonly="readonly">
 
             </div>
-            <br clear="all"><br><br>
+            <br clear="all">
+            <div class="flex-item3">
+                <a href="#pagefour" class="ui-btn" data-transition="flip">Ounces</a>
+            </div>
+
             <div class="flex-item">
                 <a href="#pagethree" class="ui-btn" data-transition="flip">Bottles</a>
             </div>
@@ -122,6 +116,54 @@
 
     </div>
     <div data-role="page" id="pagethree">
+        <div class="flex-container2">
+            <div class="flex-item">
+                <h2>
+                    Grocery Shopping Helper
+                </h2>
+            </div>
+        </div>
+
+        <div class="flex-item2">
+            <p class="p1words">Enter the price then number of bottles and bottle volume (fluid ounces):</p>
+        </div>
+
+        <div class="flex-item2">
+            <span class="lblInput">Price:</span><input id="bottleprice" type="number">
+        </div>
+
+        <div class="flex-item2">
+            <span class="lblInput">Count:</span><input id="bottlecount" type="number">
+        </div>
+
+
+        <div class="flex-item2">
+            <span class="lblInput">Volume:</span><input id="bottlevolume" type="number">
+        </div>
+
+        <div class="flex-item">
+            <a href="#" class="ui-btn" id="bottlecalc">Calculate</a>
+        </div>
+
+        <div class="flex-item2">
+            <span class="lblInput">Cost per oz:</span><input id="bottlecost" readonly="readonly">
+
+        </div>
+        <br clear="all">
+        <div class="flex-item">
+            <a href="#pagefour" class="ui-btn" data-transition="flip">Ounces</a>
+        </div>
+
+        <div class="flex-item">
+            <a href="#pagetwo" class="ui-btn" data-transition="flip">Pounds</a>
+        </div>
+        <div class="flex-item">
+            <a href="#pageone" class="ui-btn" data-transition="flip">Home</a>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="pagefour">
         <div class="flex-container">
             <div class="flex-item">
                 <h2>
@@ -131,54 +173,48 @@
         </div>
 
         <div class="flex-container2">
-            <div class="flex-item">
-
-            </div>
-
-
-            <div class="flex-item2">
-                <p class="p1words">Enter the price then number of bottles and bottle volume (fluid ounces):</p>
-            </div>
-
-
-            <div class="flex-item2">
-                <span class="lblInput">Price:</span><input id="bottleprice" type="number">
-            </div>
-
-
-            <div class="flex-item2">
-                <span class="lblInput">Count:</span><input id="bottlecount" type="number">
-            </div>
-
-
-            <div class="flex-item2">
-                <span class="lblInput">Volume:</span><input id="bottlevolume" type="number">
-            </div>
-            <br clear="all">
 
             <div class="flex-item">
-                <a href="#" class="ui-btn" id="bottlecalc">Calculate</a>
+                Enter the price then number of ounces:
             </div>
 
             <br clear="all">
-            <div class="flex-item2">
-                <span class="lblInput">Cost per oz:</span><input id="bottlecost" readonly="readonly">
 
+            <div class="flex-item2">
+                <span class="lblInput">Price:</span><input id="ozprice" type="number">
             </div>
-            
+
+            <br clear="all">
+
+            <div class="flex-item2">
+                <span class="lblInput">Ounces:</span><input id="ozounce" type="number">
+            </div>
             <br clear="all">
             <div class="flex-item">
+                <a href="#" class="ui-btn" id="ozcalc">Calculate</a>
+            </div>
+            <br clear="all">
+            <div class="flex-item2">
+                <span class="lblInput">Cost per oz:</span><input id="ozcost" readonly="readonly">
+
+            </div>
+            <br clear="all">
+            <div class="flex-item3">
                 <a href="#pagetwo" class="ui-btn" data-transition="flip">Pounds</a>
+            </div>
+
+            <div class="flex-item">
+                <a href="#pagethree" class="ui-btn" data-transition="flip">Bottles</a>
             </div>
             <div class="flex-item">
                 <a href="#pageone" class="ui-btn" data-transition="flip">Home</a>
             </div>
 
         </div>
-
-
-
     </div>
+
+
+
     <div data-role="page" id="about">
         <div class="flex-container">
             <div class="flex-item">
@@ -191,7 +227,7 @@
                 <p class="p1words">
                     This app designed by <em>Randal Johnson</em> to assist in the sometimes difficult task of shopping for
                     groceries, when one product gives price per pound, and the competitor's product has the price listed per ounce; also for
-                    comparing packs of bottled water, where the number of bottles and bottle size are different.<br clear="all"><br>For questions, comments, or suggestions, 
+                    comparing packs of bottled water, where the number of bottles and bottle size are different.<br clear="all"><br>For questions, comments, or suggestions,
                     please email <a href="mailto:groceryshoppinghelper@gmail.com?Subject=Grocery%20Shopping%20Helper" target="_top">groceryshoppinghelper@gmail.com</a>
                 </p>
             </div>
@@ -201,8 +237,8 @@
             </div>
 
 
-            </div>
         </div>
+    </div>
 
 
     <script type="text/javascript" src="cordova.js"></script>

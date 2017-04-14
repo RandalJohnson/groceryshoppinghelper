@@ -16,6 +16,16 @@ $(document).ready(function () {
 
 
         });
+
+        $("#ozcalc").click(function () {
+            var ozprice = $("#ozprice").val();
+            var ozounce = $("#ozounce").val();
+            var ozcost = ozprice / ozounce;
+
+            $("#ozcost").val(ozcost.toFixed(3));
+
+        });
+
         $("#bottlecalc").click(function () {
             var bottleprice = $("#bottleprice").val();
             var bottlecount = $("#bottlecount").val();
