@@ -25,7 +25,7 @@ body {
     flex-flow: column nowrap;
     align-content: space-between;
     justify-content: space-around;
-    padding: 10px;
+
     overflow:hidden;
 
 }
@@ -47,7 +47,7 @@ body {
     display: flex;
     background-color: black;
     color: lightgreen;
-    
+    align-content: flex-start;
     justify-content: space-around;
     overflow:hidden;
     
