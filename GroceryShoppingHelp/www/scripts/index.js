@@ -12,7 +12,18 @@ $(document).ready(function () {
             var ounces = pounds * 16;
             var cost = price / ounces;
 
-            $("#cost").val(cost.toFixed(2));
+            $("#cost").val(cost.toFixed(3));
+
+
+        });
+        $("#bottlecalc").click(function () {
+            var bottleprice = $("#bottleprice").val();
+            var bottlecount = $("#bottlecount").val();
+            var bottlevolume = $("#bottlevolume").val();
+            var bottletotalvolume = bottlecount * bottlevolume;
+            var bottlecost = bottleprice / bottletotalvolume;
+
+            $("#bottlecost").val(bottlecost.toFixed(3));
 
 
         });
